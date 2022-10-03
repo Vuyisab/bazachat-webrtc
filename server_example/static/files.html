@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> <!--skip-->
+        <title>File-sharing</title>
+        <link rel="stylesheet" type="text/css" href="css/landing.css" />
+        <link rel="stylesheet" type="text/css" href="../easyrtc/easyrtc.css" />
+        <link rel="stylesheet" href="./style/files.css"/>
+        <link rel="stylesheet" href="./style/reset.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik+Maze&display=swap" rel="stylesheet">
+        <!--hide-->
+
+        <!-- Prettify Code -->
+        <script type="text/javascript" src="js/prettify/prettify.js"></script>
+        <link rel="stylesheet" type="text/css" href="js/prettify/prettify.css" />
+                <script type="text/javascript" src="js/prettify/loadAndFilter.js"></script>
+        <script type="text/javascript" src="js/prettify/jquery.min.js"></script>
+
+        <!--show-->
+        <!-- Assumes global locations for socket.io.js and easyrtc.js -->
+        <script src="/socket.io/socket.io.js"></script>
+        <script type="text/javascript" src="../easyrtc/easyrtc.js"></script>
+        <script type="text/javascript" src="../easyrtc/easyrtc_ft.js"></script>
+        <script type="text/javascript" src="js/demo_data_channel_filesharing.js"></script>
+
+        <!--hide-->
+        <!-- Styles used within the demo -->
+        <!--show-->
+    </head>
+    <body onload="connect()">
+        <!--hide-->
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="./index2.html">Chat</NavLink></a>
+                    <li><a href="./files.html">File sharing</a></li>
+                    <li><a href="./videChat.html">Video call</NavLink></a>
+                    <li><a href="./audio.html">Audio call</NavLink></a>
+                </ul>
+            </nav>
+        </header>
+        <div id="container">
+            <div id="main">
+                <!-- Main Content -->
+                <div class="banner">
+                    <div class="overlay"></div>
+                    <h1>
+                      Welcome <br />
+                      to the <br />
+                      file sharing<br/>
+                      hub
+                    </h1>
+                  </div>
+                <!--show-->
+                <div id="iam">Obtaining ID...</div><BR />
+                <div id="peerZone">
+                </div>
+
+                <!--hide-->
+
+                
+
+                <!-- End Main Content -->
+
+            </div>
+            
+
+        </div>
+        <!--show-->
+        <footer id="footer">
+            <ul>
+                <li>BazaTech&copy;</li>
+                <li>BazaChat&trade;</li>
+                <li>About</li>
+                <li>Hire me</li>
+            </ul>
+        </footer>
+    </body>
+</html>

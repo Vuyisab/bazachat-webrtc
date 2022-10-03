@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Multiparty Chatroom</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+         <link rel="stylesheet" type="text/css" href="../easyrtc/easyrtc.css" />
+         <link rel="stylesheet" href="./style/video.css"/>
+        <link rel="stylesheet" href="./style/reset.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik+Maze&display=swap" rel="stylesheet">
+
+        <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+        <script src="/socket.io/socket.io.js"></script>
+        <script type="text/javascript" src="../easyrtc/easyrtc.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/demo_room.css" />
+        <script type="text/javascript" src="js/demo_multiparty.js"></script>
+    </head>
+
+    <body onload="appInit()">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="./index2.html">Chat</NavLink></a>
+                    <li><a href="./files.html">File sharing</a></li>
+                    <li><a href="./videChat.html">Video call</NavLink></a>
+                    <li><a href="./audio.html">Audio call</NavLink></a>
+                </ul>
+            </nav>
+        </header>
+        <div id="fullpage"  class="boxCommon" style="background-image:url(images/irongrip.png)">
+            <video id="box0" class="transit boxCommon thumbCommon easyrtcMirror" muted="muted" volume="0" autoplay="autoplay" playsinline="playsinline"></video>
+            <video id="box1" class="transit boxCommon thumbCommon" style="visibility:hidden" autoplay="autoplay" playsinline="playsinline"></video>
+            <video id="box2" class="transit boxCommon thumbCommon" style="visibility:hidden" autoplay="autoplay" playsinline="playsinline"></video>
+            <video id="box3" class="transit boxCommon thumbCommon" style="visibility:hidden" autoplay="autoplay" playsinline="playsinline"></video>
+            <div id="textentryBox" onsubmit="sendText()" style="display:none" >
+                <input type="text" id="textentryField"  class="transit boxcommon" /><br>
+                <button id="textentrySubmit" style="float:right;margin-right:1em" onclick="sendText()">Send</button>
+                <button id="textentryCancel" style="float:left;margin-left:1em" onclick="cancelText()">Cancel</button>
+            </div>
+
+            <img id="killButton" class="transit boxCommon" onclick="killActiveBox()" src="images/button_close.png" style="display:none;z-index:3" alt="close button" />
+            <img id="muteButton" class="transit boxCommon" onclick ="muteActiveBox()" src="images/button_mute.png" style="display:none;z-index:3" alt="mute button" />
+            <img id="textEntryButton" class="transit boxCommon" onclick ="showTextEntry()" src="images/textEntry.png" style="z-index:3;display:none" alt="text button" />
+        </div>
+        <footer id="footer">
+            <ul>
+                <li>BazaTech&copy;</li>
+                <li>BazaChat&trade;</li>
+                <li>About</li>
+                <li>Hire me</li>
+            </ul>
+        </footer>
+    </body>
+</html>

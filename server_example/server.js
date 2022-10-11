@@ -1,5 +1,7 @@
 // Load required modules
 var http    = require("http");              // http server core module
+var https   = require("https");
+var fs = require("fs");
 var express = require("express");           // web framework external module
 var serveStatic = require('serve-static');  // serve static files
 var socketIo = require("socket.io");        // web socket external module
@@ -20,7 +22,14 @@ app.use(serveStatic('static', {'index': ['index2.html']}));
 
 // Start Express http server on port 8080
 var webServer = http.createServer(app);
-
+/*
+var webServer = https.createServer(
+    {
+        key:  fs.readFileSync(__dirname + "/certs/localhost.key"),
+        cert: fs.readFileSync(__dirname + "/certs/localhost.crt")
+    }
+    ,app);
+*/
 // Start Socket.io so it attaches itself to Express server
 var socketServer = socketIo.listen(webServer, {"log level":1});
 

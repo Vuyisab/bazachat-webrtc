@@ -5,7 +5,7 @@ var fs = require("fs");
 var express = require("express");           // web framework external module
 var serveStatic = require('serve-static');  // serve static files
 var socketIo = require("socket.io");        // web socket external module
-
+const PORT = process.env.PORT || 3000;
 // This sample is using the easyrtc from parent folder.
 // To use this server_example folder only without parent folder:
 // 1. you need to replace this "require("../");" by "require("open-easyrtc");"
@@ -82,6 +82,6 @@ var rtc = easyrtc.listen(app, socketServer, null, function(err, rtcRef) {
 });
 
 // Listen on port 8080
-webServer.listen(8080, function () {
+webServer.listen(PORT, function () {
     console.log('listening on http://localhost:8080');
 });
